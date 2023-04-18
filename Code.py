@@ -10,11 +10,8 @@ def count_kmers(sequence, k_size):
     return data
 
 output = count_kmers("CTGACTGACTGACTGTA", 3)
-
-print(output)
-
 #Generate the frequency of the coverage values
-
+print (output)
 def calculate_coverage_frequence(kmer_dataset):
     _coverage_freq = {}
     for coverage in kmer_dataset.values():
@@ -24,8 +21,6 @@ def calculate_coverage_frequence(kmer_dataset):
             _coverage_freq[coverage] = 1
     return _coverage_freq
 
-results = calculate_coverage_frequence(
-    {'CTG': 4, 'TGA': 3, 'GAC': 3, 'ACT': 3, 'TGT': 1, 'GTA': 1}
-)
-#dictionary that count how many times k-mers with coverage X appears in our sample:
+results = calculate_coverage_frequence(output)
+#returns how many times k-mers with coverage X appears in our sample
 print(results)
